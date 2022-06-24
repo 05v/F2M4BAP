@@ -17,7 +17,7 @@
     $statement = $connection->prepare('SELECT * FROM `plaatsen` WHERE id=?');
     $params = [$id];
     $statement->execute($params);
-    $place = $statement->fetch(PDO::FETCH_ASSOC);
+    $row = $statement->fetch(PDO::FETCH_ASSOC);
 
     $result = $connection->query("SELECT * FROM `plaatsen`")
 ?>
